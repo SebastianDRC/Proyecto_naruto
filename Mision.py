@@ -1,11 +1,4 @@
-class Ninja:
-    def __init__(self, nombre, aldea, rango, ataque, defensa, chakra, lista_jutsus, vida):
-        self.nombre = nombre
-        self.aldea = aldea
-        self.rango = rango
-        self.estadisticas = {"ataque": ataque, "defensa": defensa, "chakra": chakra}
-        self.lista_jutsus = lista_jutsus
-        self.vida = vida
+from Ninja import Ninja
 
 class Mision:
     def __init__(self, nombre, rango_requerido, recompensa_ataque, recompensa_defensa, recompensa_chakra):
