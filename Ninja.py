@@ -7,7 +7,7 @@ class Ninja:
         self.lista_jutsus = lista_jutsus
         self.vida = vida
         pass
-    def train (self,ataque_train=1,defensa_train=1,chakra_train=1):
+    def train (self,ataque_train=3,defensa_train=2,chakra_train=5):
         self.estadisticas["ataque"] += ataque_train
         self.estadisticas["defensa"] += defensa_train
         self.estadisticas["chakra"] += chakra_train
