@@ -2,6 +2,7 @@ from Mision import Mision
 from factory import KonohaFactory, SunaFactory, AkatsukiFactory
 from Ninja import Ninja
 from Combat import Combat
+from builder import NinjaBuilder
 
 print("PRUEBA CREACION NINJA CON FABRICA CONCRETA")
 
@@ -60,9 +61,20 @@ print(mision_a.asignar_a(kakashi))
 # Mostrar resultados finales
 print("\n=== Estadísticas finales ===")
 naruto.mostrar_informacion()
-sasuke.mostrar_informacion()
-kakashi.mostrar_informacion()
 
 
+print("\nPRUEBA BUILDER")
+sasuke = (
+    NinjaBuilder()
+    .set_nombre("Sasuke")
+    .set_aldea("Konoha")
+    .set_rango("Chunin")
+    .set_ataque(25)
+    .set_defensa(20)
+    .set_chakra(30)
+    .add_jutsu("Chidori")
+    .add_jutsu("Sharingan")
+    .build()
+)
 
-
+print(sasuke)
