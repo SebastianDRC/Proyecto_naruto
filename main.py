@@ -41,18 +41,28 @@ batalla.iniciar_batalla()
 
 print("PRUEBA MISION")
 
-mision1 = Mision("Recolectar hierbas", "Genin", 5, 3, 2)
-mision2 = Mision("Proteger al señor feudal", "Chunin", 10, 8, 6)
+# Crear ninjas
+naruto = Ninja("Naruto", "Konoha", "Genin", 50, 40, 60, ["Rasengan"])
+sasuke = Ninja("Sasuke", "Konoha", "Chunin", 55, 45, 70, ["Chidori"])
+kakashi = Ninja("Kakashi", "Konoha", "Jonin", 80, 75, 90, ["Raikiri"])
 
-mensaje, completada = mision1.asignar_a(naruto)
-print(mensaje)
-if completada:
-    print("Estadísticas después de la misión 1:", naruto.estadisticas)
+# Crear misiones
+mision_d = Mision("Recolectar hierbas", "D", "Genin", 5, 3, 2)
+mision_c = Mision("Escoltar comerciante", "C", "Chunin", 10, 5, 4)
+mision_a = Mision("Proteger al Hokage", "A", "Jonin", 20, 15, 10)
 
-mensaje, completada = mision2.asignar_a(itachi)
-print(mensaje)
-if completada:
-    print("Estadísticas después de la misión 2:", itachi.estadisticas)
+# Probar misiones
+print(mision_d.asignar_a(naruto))   
+print(mision_c.asignar_a(naruto))   
+print(mision_c.asignar_a(sasuke))   
+print(mision_a.asignar_a(kakashi))  
 
-
+# Mostrar resultados finales
+print("\n=== Estadísticas finales ===")
 naruto.mostrar_informacion()
+sasuke.mostrar_informacion()
+kakashi.mostrar_informacion()
+
+
+
+
