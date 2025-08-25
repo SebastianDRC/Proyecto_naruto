@@ -1,3 +1,4 @@
+from Mision import Mision
 from factory import KonohaFactory, SunaFactory, AkatsukiFactory
 from Ninja import Ninja
 from Combat import Combat
@@ -37,3 +38,21 @@ print("PRUEBA COMBATE")
 
 batalla = Combat(naruto, itachi)
 batalla.iniciar_batalla()
+
+print("PRUEBA MISION")
+
+mision1 = Mision("Recolectar hierbas", "Genin", 5, 3, 2)
+mision2 = Mision("Proteger al señor feudal", "Chunin", 10, 8, 6)
+
+mensaje, completada = mision1.asignar_a(naruto)
+print(mensaje)
+if completada:
+    print("Estadísticas después de la misión 1:", naruto.estadisticas)
+
+mensaje, completada = mision2.asignar_a(itachi)
+print(mensaje)
+if completada:
+    print("Estadísticas después de la misión 2:", itachi.estadisticas)
+
+
+naruto.mostrar_informacion()
