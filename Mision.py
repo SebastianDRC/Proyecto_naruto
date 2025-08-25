@@ -13,9 +13,9 @@ class Mision:
             ninja.estadisticas["ataque"] += self.recompensa_ataque
             ninja.estadisticas["defensa"] += self.recompensa_defensa
             ninja.estadisticas["chakra"] += self.recompensa_chakra
-            return f"{ninja.nombre} completó la misión {self.nombre} ✅"
+            return f"{ninja.nombre} completó la misión {self.nombre} "
         else:
-            return f"{ninja.nombre} no puede aceptar la misión {self.nombre} ❌ (Requiere rango {self.rango_requerido})"
+            return f"{ninja.nombre} no puede aceptar la misión {self.nombre}  (Requiere rango {self.rango_requerido})"
 
 
 # ---------------- PRUEBAS ----------------
