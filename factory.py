@@ -59,5 +59,3 @@ class AkatsukiFactory:
             chakra=random.randint(20, 30),
             lista_jutsus=jutsus_random
         )
-
-
