@@ -1,4 +1,3 @@
-from Ninja import Ninja
 import random
 
 class Combat:
