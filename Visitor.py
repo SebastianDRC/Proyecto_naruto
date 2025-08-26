@@ -26,6 +26,6 @@ class VisitorExportar:
             }
         })
 
-    def exportar_a_json(self, archivo="exportacion.json"):
+    def exportar_a_json(self, archivo="ninjas_misiones.json"):
         with open(archivo, "w", encoding="utf-8") as f:
             json.dump(self.data, f, ensure_ascii=False, indent=2)
