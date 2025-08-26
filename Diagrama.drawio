@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.1">
+  <diagram name="Diagrama UML Naruto" id="0">
+    <mxGraphModel dx="1426" dy="1743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="visitor" value="&lt;div&gt;&lt;b&gt;VisitorExportar&lt;/b&gt;&lt;br&gt;&lt;hr&gt;data: dict&lt;br&gt;visit_ninja(ninja: Ninja)&lt;br&gt;visit_mision(mision: Mision)&lt;br&gt;exportar_a_json(archivo=&#39;ninjas_misiones.json&#39;)&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=1;align=left;verticalAlign=top;spacing=6;container=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="30" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="mision" value="&lt;div&gt;&lt;b&gt;Mision&lt;/b&gt;&lt;br/&gt;&lt;hr/&gt;nombre: str&lt;br/&gt;rango_mision: str&lt;br/&gt;rango_requerido: str&lt;br/&gt;recompensa_ataque: int&lt;br/&gt;recompensa_defensa: int&lt;br/&gt;recompensa_chakra: int&lt;br/&gt;&lt;hr/&gt;asignar_a(ninja: Ninja): str&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=1;align=left;verticalAlign=top;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="60" y="220" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ninja" value="&lt;div&gt;&lt;b&gt;Ninja&lt;/b&gt;&lt;br/&gt;&lt;hr/&gt;nombre: str&lt;br/&gt;aldea: str&lt;br/&gt;rango: str&lt;br/&gt;estadisticas: dict&lt;br/&gt;lista_jutsus: list&lt;br/&gt;vida: int&lt;br/&gt;&lt;hr/&gt;train(ataque_train=3, defensa_train=2, chakra_train=5)&lt;br/&gt;mostrar_informacion()&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=1;align=left;verticalAlign=top;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="520" y="280" width="330" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="builder" value="&lt;div&gt;&lt;b&gt;NinjaBuilder&lt;/b&gt;&lt;br/&gt;&lt;hr/&gt;nombre: str&lt;br/&gt;aldea: str&lt;br/&gt;rango: str&lt;br/&gt;ataque: int&lt;br/&gt;defensa: int&lt;br/&gt;chakra: int&lt;br/&gt;vida: int&lt;br/&gt;jutsus: list&lt;br/&gt;&lt;hr/&gt;set_nombre(nombre: str): NinjaBuilder&lt;br/&gt;set_aldea(aldea: str): NinjaBuilder&lt;br/&gt;set_rango(rango: str): NinjaBuilder&lt;br/&gt;set_ataque(ataque: int): NinjaBuilder&lt;br/&gt;set_defensa(defensa: int): NinjaBuilder&lt;br/&gt;set_chakra(chakra: int): NinjaBuilder&lt;br/&gt;set_vida(vida: int): NinjaBuilder&lt;br/&gt;add_jutsu(jutsu: str): NinjaBuilder&lt;br/&gt;build(): Ninja&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=1;align=left;verticalAlign=top;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="960" y="120" width="360" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="konoha" value="&lt;div&gt;&lt;b&gt;KonohaFactory&lt;/b&gt;&lt;br/&gt;&lt;hr/&gt;crear_ninja(nombre: str): Ninja&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;strokeWidth=1;align=left;verticalAlign=top;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="575" y="700" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="suna" value="&lt;div&gt;&lt;b&gt;SunaFactory&lt;/b&gt;&lt;br&gt;&lt;hr&gt;crear_ninja(nombre: str): Ninja&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;strokeWidth=1;align=left;verticalAlign=top;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="260" y="560" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="akatsuki" value="&lt;div&gt;&lt;b&gt;AkatsukiFactory&lt;/b&gt;&lt;br/&gt;&lt;hr/&gt;crear_ninja(nombre: str): Ninja&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;strokeWidth=1;align=left;verticalAlign=top;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="930" y="560" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="combat" value="&lt;div&gt;&lt;b&gt;Combat&lt;/b&gt;&lt;br/&gt;&lt;hr/&gt;ninja1: Ninja&lt;br/&gt;ninja2: Ninja&lt;br/&gt;&lt;hr/&gt;turno_ataque(atacante: Ninja, defensor: Ninja)&lt;br/&gt;iniciar_batalla()&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;strokeWidth=1;align=left;verticalAlign=top;spacing=6;" parent="1" vertex="1">
+          <mxGeometry x="670" y="-120" width="330" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="Visita" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;" parent="1" source="visitor" target="mision" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="Visita" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;" parent="1" source="visitor" target="ninja" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="95" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="Asigna" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;" parent="1" source="mision" target="ninja" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="Crea" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;" parent="1" source="konoha" target="ninja" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;" parent="1" source="suna" target="ninja" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;" parent="1" source="akatsuki" target="ninja" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sjU_rxXZqAhWJstlV728-2" value="Crea" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e6">
+          <mxGeometry x="0.4286" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="Construye" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;" parent="1" source="builder" target="ninja" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="Usa" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="850" y="30" as="sourcePoint" />
+            <mxPoint x="650" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="850" y="80" />
+              <mxPoint x="651" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
