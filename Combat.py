@@ -11,7 +11,6 @@ class Combat:
         if atacante.lista_jutsus and atacante.estadisticas["chakra"] > 0:
             jutsu = random.choice(atacante.lista_jutsus)
             print(f"{atacante.nombre} usa {jutsu}!")
-            daño += 5
             atacante.estadisticas["chakra"] -= 1
         
         defensor.vida -= daño

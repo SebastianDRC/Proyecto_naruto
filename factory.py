@@ -26,7 +26,7 @@ class KonohaFactory:
             nombre=nombre,
             aldea="Konoha",
             rango=rango_random,
-            ataque=random.randint(10, 20),
+            ataque=random.randint(15, 20),
             defensa=random.randint(8, 15),
             chakra=random.randint(15, 25),
             lista_jutsus=jutsus_random
@@ -40,8 +40,8 @@ class SunaFactory:
             nombre=nombre,
             aldea="Suna",
             rango=rango_random,
-            ataque=random.randint(10, 18),
-            defensa=random.randint(10, 18),
+            ataque=random.randint(15, 18),
+            defensa=random.randint(10, 15),
             chakra=random.randint(15, 25),
             lista_jutsus=jutsus_random
         )
